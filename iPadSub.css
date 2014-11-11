@@ -1,0 +1,393 @@
+/* Hides controversial and rising links */
+#header [href$="/rising/"],
+#header [href$="/controversial/"] {
+    display: none;
+}
+
+/* Workaround for lingering margins in said links */
+#header .tabmenu li { margin: 0; }
+#header .tabmenu a { margin: 0 3px; }
+
+/* Hides Recently Viewed links; check this one if something breaks */
+/* Found this solution here: http://redd.it/1iwanl */
+ul.content:nth-child(2), div.title:nth-child(1) > h1:nth-child(1), .account-activity-box > p:nth-child(1) {
+    display: none;
+}
+
+
+/* -------- MAIN -------- */
+a {
+    color: rgb(0, 136, 204);
+}
+
+textarea {
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif !important;
+    font-weight: 200;
+}
+
+#sr-header-area {
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+    font-weight: 200;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+#sr-header-area a,
+#sr-header-area .srSep {
+    color: white !important;
+}
+
+#sr-header-area .dropdown {
+    color: white;
+}
+
+#RESShortcutsEditContainer {
+    display: none;
+} 
+
+#header {
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: none;
+}
+
+#header-img {
+    width: 20px;
+    height: 50px;
+    margin-top: -3px;
+    margin-right: 0px;
+}
+
+.pagename {
+    width: 140px;
+    height: 50px;
+   visibility: hidden;
+}
+
+.pagename a {
+    visibility: visible;
+    background: url(%%iPadSubLogo%%) transparent no-repeat;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: -3px;
+    width: 140px !important;
+    height: 50px !important;
+    font-size: 0 !important;
+}
+
+#header #header-bottom-right {
+    padding-right: 20px;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#header #header-bottom-right a {
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 10px;
+}
+
+#header #header-bottom-right a:hover {
+    text-decoration: none;
+}
+
+#header #header-bottom-right #userbarToggle {
+    display: none;
+}
+
+#RESDropdownOptions li,
+#RESDropdownOptions li:hover,
+#RESDropdownOptions a,
+#RESDropdownOptions a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-color: white;
+}
+
+.side {
+    padding: 2px 10px;
+    margin-right: 0;
+}
+
+.side .spacer .linkinfo {
+    border-radius: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.side #search input {
+    border-radius: 4px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.side .titlebox .redditname a,
+.side .titlebox .subscribers,
+.side .titlebox .users-online,
+.side .titlebox label,
+.side .titlebox .md p,
+.side .sidecontentbox {
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+    font-weight: 300;
+    color: rgb(51, 51, 51);
+}
+
+.side .titlebox .redditname a {
+    content: "iPad";
+}
+
+.side .sidecontentbox .content {
+    border: none;
+}
+
+.side .titlebox .md {
+    margin-top: 25px;
+}
+
+.side .create {
+    display: none;
+}
+
+.sidebox.submit .morelink {
+    padding-top: 10px;
+    background-image: none;
+    border: none;
+}
+
+.sidebox.submit-text {
+    padding-bottom: 15px;
+}
+
+.sidebox.submit .morelink a {
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(0, 136, 204);
+}
+
+.sidebox.submit .morelink a:hover {
+    color: black;
+} 
+
+.sidebox.submit .nub {
+    background: url(%%SubmitLinkArrow%%) no-repeat 0 0;
+    background-size: auto 16px;
+    top: 16px;
+}
+
+.sidebox.submit-link .nub {
+    right: 60px;
+}
+
+.sidebox.submit-text .nub {
+    top: 17px;
+    right: 35px;
+}
+
+.subButtons {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.subButtons .fancy-toggle-button a {
+    background-position: 0 0;
+    background-image: linear-gradient(rgb(59, 174, 231), rgb(0, 136, 204));
+    border-radius: 4px;
+    border-bottom-color: rgb(13, 106, 178);
+    border-top-color: rgb(25, 146, 218);
+    border-right-color: rgb(19, 126, 198);
+    border-left-color: rgb(19, 126, 198);
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+.subButtons .RESshortcut,
+.subButtons .REStoggle {
+    width: 58px;
+    background-position: 0 0;
+    background-image: linear-gradient(rgb(36, 136, 212), rgb(28, 91, 173));
+    border-radius: 4px;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+.tabmenu li a {
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 46px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); /* From Apple's site */
+}
+
+.tabmenu li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); /* From Apple's site */
+}
+
+.tabmenu .selected .choice {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); /* From Apple's site */
+}
+
+.entry.RES-keyNav-activeElement,
+.entry.RES-keyNav-activeElement .usertext .usertext-body .md {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.entry.RES-keyNav-activeElement {
+    border-right: 2px rgba(0, 0, 0, 0.5) solid;
+}
+
+.entry .title,
+.entry .tagline,
+.entry .flatlist {
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+}
+
+.entry .title,
+.entry .title:visited {
+    margin-bottom: 10px;
+    color: rgb(0, 136, 204);
+    font-size: 18px;
+}
+
+.entry .title:hover {
+    text-decoration: underline;
+}
+
+.entry .tagline {
+    font-size: 13px;
+}
+
+#siteTable .stickied.link {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+#siteTable .stickied.link .entry {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#siteTable .stickied.link a,
+#siteTable .stickied.link .stickied-tagline {
+    color: rgb(95, 195, 92);
+}
+
+#siteTable .link .tagline .author.moderator {
+    border-radius: 4px;
+    padding: 1px 10px;
+    font-weight: normal;
+    color: white !important;
+    background-color: rgb(95, 195, 92) !important;
+}
+
+#siteTable .link .tagline .moderator {
+    color: rgb(95, 195, 92);
+}
+
+.entry .flat-list li a {
+    padding-right: 3px;
+    font-size: 10px;
+    color: rgb(51, 51, 51);
+}
+
+#siteTable .link {
+    margin-bottom: 5px;
+    padding: 7px 10px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.arrow.up {
+    background: url(%%riPadUnvotedUp%%) no-repeat 0 0;
+}
+
+.arrow.upmod {
+    background: url(%%riPadUpvoted%%) no-repeat 0 0;
+}
+
+.arrow.down {
+    background: url(%%riPadUnvotedDown%%) no-repeat 0 0;
+}
+
+.arrow.downmod {
+    background: url(%%riPadDownvoted%%) no-repeat 0 0;
+}
+
+#siteTable .link .score {
+    padding-bottom: 4px;
+}
+
+#siteTable .link .score.likes {
+    color: rgb(209, 61, 69);
+}
+
+#siteTable .link .score.unvoted {
+    color: rgb(134, 135, 140);
+}
+
+#siteTable .link .score.dislikes {
+    color: rgb(75, 132, 202);
+}
+
+#siteTable .link .rank {
+    display: none;
+}
+
+#siteTable .link .expando .usertext .usertext-body .md {
+    border: 1px rgb(169, 169, 169) solid;
+    border-radius: 0;
+    background-color: white;
+}
+
+.md p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;   
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.commentarea .sitetable .comment .entry .tagline .author.submitter {
+    border-radius: 4px;
+    padding: 1px 10px;
+    font-weight: normal;
+    color: white !important;
+    background-color: rgb(76, 133, 200) !important;
+}
+
+.footer-parent,
+.debuginfo {
+    background-color: white;
+}
+
+
+
+
+/* -------- CSS iOS-LIKE SCROLLBAR --------
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+*/
